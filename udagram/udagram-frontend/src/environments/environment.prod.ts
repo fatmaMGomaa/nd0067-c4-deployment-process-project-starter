@@ -6,6 +6,8 @@ export const environment = {
   production: true,
   appName: "Udagram",
   apiHost: "http://localhost:8080/api/v0",
+  jwt_localstore_key: 'jwt',
+  user_localstore_key: 'user'
 };
 
 /*

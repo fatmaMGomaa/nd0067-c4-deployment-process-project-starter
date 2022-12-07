@@ -3,9 +3,10 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { User } from '../models/user.model';
 import { ApiService } from 'src/app/api/api.service';
 import { catchError, tap } from 'rxjs/operators';
+import { environment } from '../../../environments/environment';
 
-const JWT_LOCALSTORE_KEY = 'jwt';
-const USER_LOCALSTORE_KEY = 'user';
+const JWT_LOCALSTORE_KEY = environment.jwt_localstore_key;
+const USER_LOCALSTORE_KEY = environment.user_localstore_key;
 
 @Injectable({
   providedIn: 'root'
