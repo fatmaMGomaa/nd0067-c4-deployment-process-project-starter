@@ -4,8 +4,8 @@
 
 export const environment = {
   production: true,
-  appName: "Udagram",
-  apiHost: "http://fgomaa-udagram.eba-dkthqpyc.us-east-1.elasticbeanstalk.com/api/V0",
+  appName: 'Udagram',
+  apiHost: 'http://fgomaa-udagram.eba-dkthqpyc.us-east-1.elasticbeanstalk.com/api/V0',
   jwt_localstore_key: 'jwt',
   user_localstore_key: 'user'
 };

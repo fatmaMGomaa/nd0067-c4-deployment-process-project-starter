@@ -17,7 +17,7 @@ export class AuthLoginComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    public auth: AuthService,
+    private auth: AuthService,
     private modal: ModalController
   ) { }
 
