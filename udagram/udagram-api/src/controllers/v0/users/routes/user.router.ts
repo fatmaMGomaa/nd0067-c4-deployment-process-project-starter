@@ -7,7 +7,10 @@ const router: Router = Router();
 
 router.use('/auth', AuthRouter);
 
-router.get('/');
+router.get('/', async (req: Request, res: Response) => {
+  const users = await User.findAll();
+  res.send(users);
+});
 
 router.get('/:id', async (req: Request, res: Response) => {
   const {id} = req.params;
