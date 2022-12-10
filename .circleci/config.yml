@@ -69,23 +69,23 @@ jobs:
       - run:
           name: API Build
           command: npm run api:build
-  test:
-    docker:
-      - image: "cimg/base:stable"
-      # more setup needed for aws, node, elastic beanstalk
-    steps:
-      - node/install:
-          node-version: '16.18' 
-      - eb/setup
-      - aws-cli/setup
-      - checkout
-      - install_frontend
-      - install_backend
-      - run: 
-          name: Test Frontend 
-          command: |
-            npm run frontend:test
-            npm run frontend:e2e
+  # test:
+  #   docker:
+  #     - image: "cimg/base:stable"
+  #     # more setup needed for aws, node, elastic beanstalk
+  #   steps:
+  #     - node/install:
+  #         node-version: '16.18' 
+  #     - eb/setup
+  #     - aws-cli/setup
+  #     - checkout
+  #     - install_frontend
+  #     - install_backend
+  #     - run: 
+  #         name: Test Frontend 
+  #         command: |
+  #           npm run frontend:test
+  #           npm run frontend:e2e
   # deploy step will run only after manual approval
   deploy:
     docker:
